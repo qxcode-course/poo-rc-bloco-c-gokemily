@@ -4,4 +4,3 @@ class Foo:
     
     def __str__(self):
         return f"Foo({self.x})"
-    

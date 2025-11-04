@@ -1,0 +1,12 @@
+2025-11-04 13:26:05, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-04 13:26:06, EXEC, v:1, k:poo@array, mode:LOCK, rate:100, size:13
+2025-11-04 13:26:08, EXEC, v:1, k:poo@array, mode:LOCK, rate:100
+2025-11-04 13:26:11, EXEC, v:1, k:poo@array, mode:FREE
+2025-11-04 13:28:55, MOVE, v:1, k:poo@budega, mode:DOWN
+2025-11-04 13:29:16, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-04 13:29:24, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-04 13:29:27, MOVE, v:1, k:poo@lapiseira, mode:DOWN
+2025-11-04 13:29:32, MOVE, v:1, k:poo@pula-pula, mode:DOWN
+2025-11-04 13:29:36, MOVE, v:1, k:poo@cinema, mode:DOWN
+2025-11-04 13:29:41, MOVE, v:1, k:poo@tabuleiro, mode:DOWN
+2025-11-04 13:29:47, MOVE, v:1, k:poo@junkfood, mode:DOWN
