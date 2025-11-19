@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-12_14-36-19",
+            "content": "@@ -309,21 +309,16 @@\n a = %5B%5D%0A%0A\n-    %0A\n %0A%0A%0A%0A%0A%0A%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-11-19_01-47-26",
+            "content": "@@ -6,16 +6,17 @@\n  Cliente\n+s\n :%0A    de\n@@ -93,31 +93,24 @@\n etNome(self)\n- -%3E str\n :%0A        re\n@@ -135,82 +135,8 @@\n    %0A\n-    def setNome(self, nome: str) -%3E None:%0A        self.__nome = nome%0A    %0A\n     \n@@ -156,15 +156,8 @@\n elf)\n- -%3E str\n :%0A  \n@@ -181,17 +181,14 @@\n elf.\n-getN\n+__n\n ome\n-()\n %7D%22%0A%0A\n@@ -222,24 +222,47 @@\n _init__(self\n+, caixa: int, nome: str\n ):%0A        s\n@@ -277,703 +277,77 @@\n ixas\n-: list%5BCliente%5D %7C list%5BNone%5D = %5B%5D%0A        self.__fila: list%5BCliente%5D = %5B%5D%0A%0A    %0Adef main():%0A    mercantil = Mercantil()%0A    while True:%0A        line: str = input()%0A        arg: list%5Bstr%5D = line.split(%22 %22)%0A        print(%22$%22 + line)%0A%0A        if arg%5B0%5D == %22end%22:%0A            break%0A        elif arg%5B0%5D == %22enter%22:%0A            mercantil.enter(Cliente(arg%5B1%5D))%0A        elif arg%5B0%5D == %22call%22:%0A            mercantil.call(Cliente(arg%5B1%5D))%0A        elif arg%5B0%5D == %22finish%22:%0A            mercantil.finish()%0A        elif arg%5B0%5D == %22show%22:%0A            print(mercantil)%0A        elif arg%5B0%5D == %22init%22:%0A            mercantil: Mercantil = Mercantil()%0A        else:%0A            print(%22fail: comando nao existe%22)%0A%0Amain()\n+ = %5BNone%5D%0A        self.__fila = %5B%5D%0A%0A    %0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A# def __str__(self):\n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-11-19_02-20-45",
+            "content": "@@ -149,288 +149,102 @@\n def \n-__str__(self) -%3E str:%0A        return f%22%7Bself.getNome()%7D%22%0A%0A%0Aclass Mercantil:%0A    def __init__(self, qtdCaixas: int):%0A        self.__caixas: list%5BCliente%5D %7C list%5BNone%5D = %5BNone for i in range(qtdCaixas)%5D\n+setNome(self, nome: str) -%3E None:%0A        self.__nome = nome\n %0A    \n+%0A\n     \n-self.__fila: list%5BCliente%5D = %5B%5D%0A%0A    def getFila(self) -%3E list%5BCliente%5D\n+def __str__(self) -%3E str\n :%0A  \n@@ -260,147 +260,69 @@\n urn \n+f%22%7B\n self.\n-__fila%0A%0A    def setFila(self, fila : list%5BCliente%5D)\n+getNome()%7D%22%0A%0A%0Aclass Mercantil\n :%0A    \n- \n-   self.__fila = fila%0A%0A    def getCaixas(self) -%3E list%5BCliente%5D %7C list%5BNone%5D\n+def __init__(self)\n :%0A  \n@@ -323,31 +323,24 @@\n f):%0A        \n-return \n self.__caixa\n@@ -344,370 +344,81 @@\n ixas\n-%0A%0A    def setCaixas(self, caixas : list%5BCliente%5D %7C list%5BNone%5D):%0A        self.__caixas = caixas%0A%0A    def __str__(self) -%3E str:%0A        string = 'Caixas: %5B'%0A        for i in self.getCaixas():%0A            string += '-----' if i is None else str(i)%0A        string += '%5D%5CnEspera: %5B'%0A        for i in self.getFila():%0A            string += str(i)%0A        return string%0A\n+: list%5BCliente%5D %7C list%5BNone%5D = %5B%5D%0A        self.__fila: list%5BCliente%5D = %5B%5D\n %0A%0A  \n@@ -462,9 +462,8 @@\n til(\n-3\n )%0A  \n@@ -974,19 +974,8 @@\n til(\n-int(arg%5B1%5D)\n )%0A  \n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-11-19_02-41-26",
+            "content": "@@ -860,34 +860,8 @@\n (i)%0A\n-            string += ','%0A\n     \n@@ -955,30 +955,8 @@\n (i)%0A\n-        string += '%5D'%0A\n     \n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-19_02-43-06",
+            "content": "@@ -886,38 +886,8 @@\n ','%0A\n-        string = string%5B0:-2%5D%0A\n     \n@@ -981,38 +981,8 @@\n (i)%0A\n-        string = string%5B0:-2%5D%0A\n     \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-19_02-47-45",
+            "content": "@@ -901,33 +901,33 @@\n ing = string%5B0:-\n-1\n+2\n %5D%0A        string\n@@ -1034,17 +1034,17 @@\n ring%5B0:-\n-1\n+2\n %5D%0A      \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-19_02-47-57",
+            "content": "@@ -1040,41 +1040,8 @@\n :-1%5D\n- if string%5B-1%5D == ',' else string\n %0A   \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-19_02-49-55",
+            "content": "@@ -880,17 +880,16 @@\n ng += ',\n- \n '%0A      \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-19_02-50-04",
+            "content": "@@ -914,9 +914,9 @@\n %5B0:-\n-2\n+1\n %5D%0A  \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-19_02-50-10",
+            "content": "@@ -66,24 +66,29 @@\n nome = nome%0A\n+    %0A\n     def getN\n@@ -128,24 +128,29 @@\n self.__nome%0A\n+    %0A\n     def __st\n@@ -203,16 +203,17 @@\n me()%7D%22%0A%0A\n+%0A\n class Me\n@@ -455,16 +455,89 @@\n __fila%0A%0A\n+    def setFila(self, fila : list%5BCliente%5D):%0A        self.__fila = fila%0A%0A\n     def \n@@ -613,16 +613,110 @@\n caixas%0A%0A\n+    def setCaixas(self, caixas : list%5BCliente%5D %7C list%5BNone%5D):%0A        self.__caixas = caixas%0A%0A\n     def \n@@ -836,18 +836,18 @@\n -' if i \n-==\n+is\n  None el\n@@ -1119,406 +1119,15 @@\n ing%0A\n+%0A%0A\n     %0A\n-    def Chegar(self, cliente: Cliente) -%3E None:%0A        self.getFila().append(cliente)%0A%0A    def Chamar(self, indice: int):%0A        if len(self.getFila()) %3E 0:%0A            print('fail: sem clientes')%0A        elif self.getCaixas()%5Bindice%5D != None:%0A            print('fail: caixa ocupado')%0A        else:%0A            self.getCaixas()%5Bindice%5D = self.getFila()%5B0%5D%0A            self.getFila().pop(0)%0A%0A\n def \n@@ -1379,13 +1379,12 @@\n til.\n-Chega\n+ente\n r(Cl\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-19_03-36-13",
+            "content": "@@ -1562,14 +1562,13 @@\n == %22\n-arrive\n+enter\n %22:%0A \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-19_03-36-28",
+            "content": "@@ -834,35 +834,8 @@\n (i)%0A\n-            string += ', '%0A\n     \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-19_03-36-56",
+            "content": "@@ -884,17 +884,17 @@\n ring%5B0:-\n-2\n+1\n %5D if str\n@@ -905,17 +905,17 @@\n -1%5D == '\n- \n+,\n ' else s\n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-19_03-37-15",
+            "content": "@@ -1697,18 +1697,20 @@\n til.\n-Chamar(i\n+call(Clie\n nt\n+e\n (arg\n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-19_03-37-53",
+            "content": "@@ -1096,38 +1096,8 @@\n t):%0A\n-        print(self.getFila())%0A\n     \n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-19_03-38-54",
+            "content": "@@ -1153,18 +1153,17 @@\n Fila()) \n-==\n+%3E\n  0:%0A    \n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-11-19_03-42-03",
+            "content": "@@ -1084,32 +1084,62 @@\n , indice: int):%0A\n+        print(self.getFila())%0A\n         if len(s\n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-11-19_03-42-19",
+            "content": "@@ -1090,26 +1090,18 @@\n ce: int)\n- -%3E None\n :%0A\n+\n         \n@@ -1367,391 +1367,8 @@\n 0)%0A%0A\n-    def Finalizar(self, indice: int) -%3E Cliente %7C None:%0A        if len(self.getCaixas()) %3C indice + 1 or indice %3C 0:%0A            print('fail: caixa inexistente')%0A        elif self.getCaixas()%5Bindice%5D == None:%0A            print('fail: caixa vazio')%0A        else:%0A            atendido = self.getCaixas()%5Bindice%5D%0A            self.getCaixas()%5Bindice%5D = None%0A            return atendido%0A%0A\n def \n@@ -1773,17 +1773,14 @@\n til.\n-Finalizar\n+finish\n ()%0A \n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-19_03-49-56",
+            "content": "@@ -2170,27 +2170,16 @@\n nalizar(\n-int(arg%5B1%5D)\n )%0A      \n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-11-19_03-50-16",
+            "content": "class Cliente:\n    def __init__(self, nome: str):\n        self.__nome = nome\n    def getNome(self) -> str:\n        return self.__nome\n    def __str__(self) -> str:\n        return f\"{self.getNome()}\"\n\nclass Mercantil:\n    def __init__(self, qtdCaixas: int):\n        self.__caixas: list[Cliente] | list[None] = [None for i in range(qtdCaixas)]\n        self.__fila: list[Cliente] = []\n\n    def getFila(self) -> list[Cliente]:\n        return self.__fila\n\n    def getCaixas(self) -> list[Cliente] | list[None]:\n        return self.__caixas\n\n    def __str__(self) -> str:\n        string = 'Caixas: ['\n        for i in self.getCaixas():\n            string += '-----' if i == None else str(i)\n            string += ', '\n        string = string[0:-2]\n        string += ']\\nEspera: ['\n        for i in self.getFila():\n            string += str(i)\n            string += ', '\n        string = string[0:-2] if string[-1] == ' ' else string\n        string += ']'\n        return string\n    \n    def Chegar(self, cliente: Cliente) -> None:\n        self.getFila().append(cliente)\n\n    def Chamar(self, indice: int) -> None:\n        if len(self.getFila()) == 0:\n            print('fail: sem clientes')\n        elif self.getCaixas()[indice] != None:\n            print('fail: caixa ocupado')\n        else:\n            self.getCaixas()[indice] = self.getFila()[0]\n            self.getFila().pop(0)\n\n    def Finalizar(self, indice: int) -> Cliente | None:\n        if len(self.getCaixas()) < indice + 1 or indice < 0:\n            print('fail: caixa inexistente')\n        elif self.getCaixas()[indice] == None:\n            print('fail: caixa vazio')\n        else:\n            atendido = self.getCaixas()[indice]\n            self.getCaixas()[indice] = None\n            return atendido\n\ndef main():\n    mercantil = Mercantil(3)\n    while True:\n        line: str = input()\n        arg: list[str] = line.split(\" \")\n        print(\"$\" + line)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"arrive\":\n            mercantil.Chegar(Cliente(arg[1]))\n        elif arg[0] == \"call\":\n            mercantil.Chamar(int(arg[1]))\n        elif arg[0] == \"finish\":\n            mercantil.Finalizar(int(arg[1]))\n        elif arg[0] == \"show\":\n            print(mercantil)\n        elif arg[0] == \"init\":\n            mercantil: Mercantil = Mercantil(int(arg[1]))\n        else:\n            print(\"fail: comando nao existe\")\n\nmain()",
+            "lines": "78"
+        }
+    ]
+}

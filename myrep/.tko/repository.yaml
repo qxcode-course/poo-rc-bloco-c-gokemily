@@ -12,13 +12,14 @@ sources:
   type: clone
   branch: master
   cache_path: /workspaces/poo-rc-bloco-c-gokemily/myrep/.tko/cache/poo/Readme.md
-  cache_timestamp: '2025-11-04 13:28:25'
+  cache_timestamp: '2025-11-19 01:35:51'
   filters:
   - listas
 expanded:
 - poo@campanha-principal
 - poo@bloco_c-listas
-tasks: {}
+tasks:
+  poo@budega: '{rate:100, human:_, guide:_, alone:8, study:132}'
 flags:
   quests: 0
   tracks: 0
@@ -26,4 +27,4 @@ flags:
   graph: 0
   xray: 0
 lang: py
-selected: poo@junkfood
+selected: poo@tabuleiro
