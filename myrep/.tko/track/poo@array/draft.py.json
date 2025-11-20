@@ -2,8 +2,113 @@
     "patches": [
         {
             "label": "2025-11-04_13-26-06",
-            "content": "class Foo:\n    def __init__(self, x: int):\n        self.x = x\n    \n    def __str__(self):\n        return f\"Foo({self.x})\"\n\nlista_vazia: list[int] = []\nlista_preenchida: list[int] = [1, 2, 3, 4, 5]\nlista_preencida_objetos: list[Foo] = [Foo(1), Foo(2), Foo(3), Foo(4), Foo(5)]\n\nlista_vazia.append(1)\nlista_preenchida.append(Foo(6))",
+            "content": "@@ -115,8 +115,215 @@\n lf.x%7D)%22%0A\n+%0Alista_vazia: list%5Bint%5D = %5B%5D%0Alista_preenchida: list%5Bint%5D = %5B1, 2, 3, 4, 5%5D%0Alista_preencida_objetos: list%5BFoo%5D = %5BFoo(1), Foo(2), Foo(3), Foo(4), Foo(5)%5D%0A%0Alista_vazia.append(1)%0Alista_preenchida.append(Foo(6))\n",
             "lines": "13"
+        },
+        {
+            "label": "2025-11-19_18-42-36",
+            "content": "@@ -1,19 +1,4 @@\n-import random%0A%0A\n clas\n@@ -119,1448 +119,4 @@\n %7D)%22%0A\n-%0AlistaNumero: list%5Bint%5D = %5B%5D%0AlistaObjeto: list%5BFoo%5D = %5B%5D%0A%0AlistaNumeroPreenchida: list%5Bint%5D = %5B2,4,6,8,10%5D%0A%0Aprint(len(listaNumeroPreenchida))%0A%0AlistaNumeroPreenchida.append(2)%0Aprint(listaNumeroPreenchida)%0AlistaNumeroPreenchida.pop()%0Aprint(listaNumeroPreenchida)%0A%0AlistaNumeroPreenchida.insert(0, 12)%0Aprint(listaNumeroPreenchida)%0AlistaNumeroPreenchida.pop(0)%0Aprint(listaNumeroPreenchida)%0A%0AlistaNumeroPreenchida.insert(3, 45)%0Aprint(listaNumeroPreenchida)%0AlistaNumeroPreenchida.pop(3)%0Aprint(listaNumeroPreenchida)%0A%0Aprint('-'.join(str(listaNumeroPreenchida)))%0A%0An = 20%0AlistaSequencia = %5Bi for i in range(0, n)%5D%0A%0Aprint(listaSequencia)%0A%0AlistaAleatoria = %5Brandom.randint(0, 100000) for i in range(0, 10)%5D%0A%0Aprint(listaAleatoria)%0A%0Aprint(listaSequencia%5B2%5D)%0A%0Afor i in range(len(listaSequencia)):%0A    print(listaSequencia%5Bi%5D)%0A%0Afor i in listaSequencia:%0A    print(i)%0A%0Ax = 3%0Afor i in listaSequencia:%0A    if i == x:%0A        print('valor encontrado la%C3%A7o')%0A%0Aif x in listaSequencia:%0A    print('valor encontrado')%0A%0Aprint(listaSequencia.index(8))%0A%0AlistaParesFiltrada = %5Bi for i in listaSequencia if i %25 2 == 0%5D%0A%0Aprint(listaParesFiltrada)%0A%0AlistaTransformada = %5B(i ** 2) for i in listaSequencia%5D%0A%0Aprint(listaTransformada)%0A%0Ax = 6%0Afor i in listaSequencia:%0A    if x == i:%0A        indice = listaSequencia.index(x)%0A        listaSequencia.pop(indice)%0A%0Ax = 1%0AlistaRepetida = %5B1,4,2,5,1,7,8,3,1%5D%0A%0AnovaListaRepetida = %5Bi for i in listaRepetida if i != x%5D%0A%0Aprint(novaListaRepetida)\n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-11-19_19-25-50",
+            "content": "@@ -1578,24 +1578,4 @@\n ida)\n-%0A%0Aprint(listaObjeto)\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-19_19-27-11",
+            "content": "@@ -1598,92 +1598,4 @@\n eto)\n-%0A%0AlistaObjeto.append(Foo(322))%0AlistaObjeto.append(Foo(656))%0AlistaObjeto.append(Foo(878))\n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-19_19-27-40",
+            "content": "@@ -1682,28 +1682,8 @@\n oo(878))\n-%0A%0Aprint(listaObjeto)\n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-19_19-27-47",
+            "content": "@@ -78,67 +78,8 @@\n     \n-def __repr__(self) -%3E str:%0A        return f%22Foo(%7Bself.x%7D)%22%0A\n %0A   \n",
+            "lines": "88"
+        },
+        {
+            "label": "2025-11-19_19-33-22",
+            "content": "@@ -74,16 +74,74 @@\n = x%0A    \n+def __repr__(self) -%3E str:%0A        return f%22Foo(%7Bself.x%7D)%22\n %0A%0A    de\n@@ -1749,20 +1749,16 @@\n %0A%0Aprint(\n-str(\n listaObj\n@@ -1761,9 +1761,8 @@\n aObjeto)\n-)\n",
+            "lines": "90"
+        },
+        {
+            "label": "2025-11-19_19-33-51",
+            "content": "@@ -78,66 +78,8 @@\n     \n-def __repr__(self) -%3E str:%0A        return f%22Foo(%7Bself.x%7D)%22\n %0A%0A  \n@@ -1683,28 +1683,32 @@\n oo(878))%0A%0Aprint(\n+str(\n listaObjeto)\n@@ -1695,20 +1695,21 @@\n int(str(listaObjeto)\n+)\n",
+            "lines": "89"
+        },
+        {
+            "label": "2025-11-19_19-34-07",
+            "content": "@@ -1765,124 +1765,4 @@\n eto)\n-%0A%0AlistaObjeto.pop(3)%0A%0Aprint(listaObjeto)%0A%0Aprint(listaObjeto)%0A%0Aprint(listaObjeto)%0A%0Aprint(listaObjeto)%0A%0Aprint(listaObjeto)\n",
+            "lines": "90"
+        },
+        {
+            "label": "2025-11-19_19-34-41",
+            "content": "@@ -1779,17 +1779,17 @@\n eto.pop(\n-2\n+3\n )%0A%0Aprint\n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-11-19_19-34-47",
+            "content": "@@ -1779,17 +1779,17 @@\n eto.pop(\n-1\n+2\n )%0A%0Aprint\n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-11-19_19-34-57",
+            "content": "@@ -1807,27 +1807,8 @@\n o)%0A%0A\n-listaObjeto.pop()%0A%0A\n prin\n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-11-19_19-35-05",
+            "content": "@@ -1807,40 +1807,8 @@\n o)%0A%0A\n-listaObjeto.insert(0, Foo(111))%0A\n list\n@@ -1842,18 +1842,16 @@\n bjeto)%0A%0A\n-%0A%0A\n print(li\n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-11-19_19-35-51",
+            "content": "@@ -1878,97 +1878,8 @@\n o)%0A%0A\n-x = Foo(322)%0A%0Afor i in listaObjeto:%0A    if x == i:%0A        print(f'valor %7Bx%7D encontrado')\n %0A%0Apr\n",
+            "lines": "107"
+        },
+        {
+            "label": "2025-11-19_19-42-46",
+            "content": "@@ -1922,17 +1922,13 @@\n if x\n-.x\n  == i\n-.x\n :%0A  \n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-19_19-43-15",
+            "content": "@@ -1969,42 +1969,8 @@\n rado\n- na posicao %7BlistaObjeto.index(x)%7D\n ')%0A%0A\n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-19_19-43-44",
+            "content": "@@ -1997,18 +1997,16 @@\n .index(x\n-.x\n )%7D')%0A%0Apr\n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-19_19-44-12",
+            "content": "@@ -1997,16 +1997,18 @@\n .index(x\n+.x\n )%7D')%0A%0Apr\n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-19_19-44-18",
+            "content": "@@ -1897,25 +1897,12 @@\n or i\n-, o\n  in \n-enumerate(\n list\n@@ -1908,17 +1908,16 @@\n taObjeto\n-)\n :%0A    if\n@@ -1924,17 +1924,17 @@\n  x.x == \n-o\n+i\n .x:%0A    \n@@ -1978,17 +1978,36 @@\n osicao %7B\n-i\n+listaObjeto.index(x)\n %7D')%0A%0Apri\n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-19_19-46-09",
+            "content": "@@ -2002,59 +2002,26 @@\n ')%0A%0A\n-listaObjeto = %5Bi for i in listaObjeto if i.x %3E 300%5D\n+print(listaObjeto)\n %0A%0Apr\n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-19_19-48-44",
+            "content": "@@ -2075,81 +2075,8 @@\n o)%0A%0A\n-for i in range(10):%0A    listaObjeto.append(Foo(random.randint(0, 200)))%0A%0A\n prin\n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-19_19-49-45",
+            "content": "import random\n\nclass Foo:\n    def __init__(self, x: int):\n        self.x = x\n    def __repr__(self) -> str:\n        return f\"Foo({self.x})\"\n\n    def __str__(self):\n        return f\"Foo({self.x})\"\n\nlistaNumero: list[int] = []\nlistaObjeto: list[Foo] = []\n\nlistaNumeroPreenchida: list[int] = [2,4,6,8,10]\n\nprint(len(listaNumeroPreenchida))\n\nlistaNumeroPreenchida.append(2)\nprint(listaNumeroPreenchida)\nlistaNumeroPreenchida.pop()\nprint(listaNumeroPreenchida)\n\nlistaNumeroPreenchida.insert(0, 12)\nprint(listaNumeroPreenchida)\nlistaNumeroPreenchida.pop(0)\nprint(listaNumeroPreenchida)\n\nlistaNumeroPreenchida.insert(3, 45)\nprint(listaNumeroPreenchida)\nlistaNumeroPreenchida.pop(3)\nprint(listaNumeroPreenchida)\n\nprint('-'.join(str(listaNumeroPreenchida)))\n\nn = 20\nlistaSequencia = [i for i in range(0, n)]\n\nprint(listaSequencia)\n\nlistaAleatoria = [random.randint(0, 100000) for i in range(0, 10)]\n\nprint(listaAleatoria)\n\nprint(listaSequencia[2])\n\nfor i in range(len(listaSequencia)):\n    print(listaSequencia[i])\n\nfor i in listaSequencia:\n    print(i)\n\nx = 3\nfor i in listaSequencia:\n    if i == x:\n        print('valor encontrado la\u00e7o')\n\nif x in listaSequencia:\n    print('valor encontrado')\n\nprint(listaSequencia.index(8))\n\nlistaParesFiltrada = [i for i in listaSequencia if i % 2 == 0]\n\nprint(listaParesFiltrada)\n\nlistaTransformada = [(i ** 2) for i in listaSequencia]\n\nprint(listaTransformada)\n\nx = 6\nfor i in listaSequencia:\n    if x == i:\n        indice = listaSequencia.index(x)\n        listaSequencia.pop(indice)\n\nx = 1\nlistaRepetida = [1,4,2,5,1,7,8,3,1]\n\nnovaListaRepetida = [i for i in listaRepetida if i != x]\n\nprint(novaListaRepetida)\n\nprint(listaObjeto)\n\nlistaObjeto.append(Foo(322))\nlistaObjeto.append(Foo(656))\nlistaObjeto.append(Foo(878))\n\nprint(listaObjeto)\n\nlistaObjeto.pop(1)\n\nprint(listaObjeto)\n\nlistaObjeto.insert(0, Foo(111))\nlistaObjeto.pop()\n\nprint(listaObjeto)\n\nx = Foo(322)\n\nfor i, o in enumerate(listaObjeto):\n    if x.x == o.x:\n        print(f'valor {x} encontrado na posicao {i}')\n\nlistaObjeto = [i for i in listaObjeto if i.x > 300]\n\nprint(listaObjeto)\n\nfor i in range(10):\n    listaObjeto.append(Foo(random.randint(0, 200)))\n\nprint(listaObjeto)",
+            "lines": "114"
         }
     ]
 }
